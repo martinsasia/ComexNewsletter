@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+  <body style="margin:0;padding:0;background:#f6f7f9">
+    <!-- Preheader oculto (mover al body) -->
+    <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;font-size:1px;line-height:1px">
+      Resumen de novedades de comercio exterior, normativas y operativa.
+    </div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f6f7f9;padding:24px 0">
+      <tr>
+        <td align="center">
+          <!-- Contenedor principal -->
+          <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:100%;background:#ffffff;border-radius:8px;overflow:hidden;border:1px solid #e5e7eb">
+            
+            <!-- Header -->
+            <tr>
+              <td style="padding:18px 24px;border-bottom:1px solid #e5e7eb">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                  <tr>
+                    <td valign="middle" style="width:56px;padding-right:12px">
+                      <!-- Use Drive direct link; replace FILE_ID with the extracted ID -->
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/48px-PNG_transparency_demonstration_1.png" alt="Logo" width="48" style="display:block;border-radius:8px;border:1px solid #e5e7eb">
+                     
+                    </td>
+                    <td valign="middle">
+                      <div style="font-family:Arial,Helvetica,sans-serif;font-size:20px;line-height:1.2;color:#111827;font-weight:700;margin:0">
+                        Nodo Comex - Newsletter de Comercio Exterior
+                      </div>
+                      <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#6b7280;margin-top:4px">
+                        {{formatDate(now; "MM/DD/YYYY")}}
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Cuerpo (items) -->
+            <tr>
+              <td style="padding:16px 24px">
+                {{5.itemsHtml}}
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td style="background:#f9fafb;padding:16px 24px;border-top:1px solid #e5e7eb">
+                <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#6b7280;line-height:1.5;margin:0 0 6px 0">
+                  Recibiste este correo porque estás suscripto a las novedades de comercio exterior.
+                  Para dejar de recibirlo <a href="https://forms.gle/tu-form-de-baja" style="color:#0B69C7;text-decoration:underline">haz clic aquí</a> o responde con "BAJA".
+                </div>
+                <div style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#9ca3af">
+                  © {{formatDate(now; "yyyy")}} Deriva Digital. Todos los derechos reservados.
+                </div>
+              </td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!-- ITEM -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 20px 0">
+  <!-- Imagen -->
+  <tr style="{{if(2.`50` = "N/D"; "display:none"; if(2.`50` = ""; "display:none"; if(2.`50` = null; "display:none"; "")))}}">
+    <td style="padding:0 0 12px 0">
+      <img src="{{2.`50`}}" alt="" width="552" style="width:100%;max-width:552px;height:auto;display:block;border-radius:8px;border:1px solid #e5e7eb">
+    </td>
+  </tr>
+
+  <!-- Kicker -->
+  <tr style="{{if(2.`45` = "N/D"; "display:none"; if(2.`45` = ""; "display:none"; if(2.`45` = null; "display:none"; "")))}}">
+    <td style="font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:.5px;color:#0B69C7;text-transform:uppercase;padding:0 0 6px 0">
+      {{2.`45`}}
+    </td>
+  </tr>
+
+  <!-- Título (22px si destacado) -->
+  <tr>
+    <td style="font-family:Arial,Helvetica,sans-serif;font-weight:700;line-height:1.25;margin:0;padding:0 0 6px 0;
+               font-size:{{if(2.`49` = true; 22; if(2.`49` = "TRUE"; 22; if(2.`49` = "true"; 22; if(2.`49` = 1; 22; 18))))}}px;color:#111827">
+      {{2.`2`}}
+    </td>
+  </tr>
+
+  <!-- Resumen -->
+  <tr>
+    <td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;color:#374151;padding:0 0 8px 0">
+      {{2.`7`}}
+    </td>
+  </tr>
+
+  <!-- Chips -->
+  <tr>
+    <td style="padding:6px 0 10px 0">
+      <!-- Fuente -->
+      <span style="{{if(2.`1` = "N/D"; "display:none"; if(2.`1` = ""; "display:none"; if(2.`1` = null; "display:none"; "")))}};display:inline-block;background:#F3F4F6;color:#374151;border:1px solid #E5E7EB;border-radius:999px;padding:3px 8px;margin:0 6px 6px 0;font:12px Arial">
+        {{2.`1`}}
+      </span>
+      <!-- Categoría -->
+      <span style="{{if(2.`8` = "N/D"; "display:none"; if(2.`8` = ""; "display:none"; if(2.`8` = null; "display:none"; "")))}};display:inline-block;background:#F3F4F6;color:#374151;border:1px solid #E5E7EB;border-radius:999px;padding:3px 8px;margin:0 6px 6px 0;font:12px Arial">
+        {{2.`8`}}
+      </span>
+      <!-- Región -->
+      <span style="{{if(2.`29` = "N/D"; "display:none"; if(2.`29` = ""; "display:none"; if(2.`29` = null; "display:none"; "")))}};display:inline-block;background:#ECFDF5;color:#065F46;border:1px solid #D1FAE5;border-radius:999px;padding:3px 8px;margin:0 6px 6px 0;font:12px Arial">
+        {{2.`29`}}
+      </span>
+      <!-- Impacto -->
+      <span style="{{if(2.`32` = "N/D"; "display:none"; if(2.`32` = ""; "display:none"; if(2.`32` = null; "display:none"; "")))}};display:inline-block;background:#FEF3C7;color:#92400E;border:1px solid #FDE68A;border-radius:999px;padding:3px 8px;margin:0 6px 6px 0;font:12px Arial">
+        Impacto: {{2.`32`}}
+      </span>
+      <!-- Tipo de cambio -->
+      <span style="{{if(2.`34` = "N/D"; "display:none"; if(2.`34` = ""; "display:none"; if(2.`34` = null; "display:none"; "")))}};display:inline-block;background:#FFF7ED;color:#9A3412;border:1px solid #FED7AA;border-radius:999px;padding:3px 8px;margin:0 6px 6px 0;font:12px Arial">
+        Cambio: {{2.`34`}}
+      </span>
+    </td>
+  </tr>
+  <!-- Instrumento: mostrar solo si instrument_type tiene valor -->
+  <tr style="{{if(2.`15` = "N/D"; "display:none"; if((2.`15` = """") + """"; "display:none"; ))}}">
+    <td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.5;color:#4b5563;padding:0 0 10px 0">
+      <span style="font-weight:bold">Instrumento:</span>
+      <span style="font-family:Menlo,Consolas,monospace">
+        {{if(2.`15` = "N/D"; ; if((2.`15` = """") + """"; ; 2.`15`))}}{{if(2.`16` = "N/D"; ; if((2.`16` = """") + """"; ; 2.`16`))}}{{if(2.`17` = "N/D"; ; if((2.`17` = """") + """"; ; " — " + 2.`17`))}}
+      </span>
+      <span style="{{if(2.`18` = "N/D"; "display:none"; if((2.`18` = """") + """"; "display:none"; ))}}"> • Artículos afectados: {{2.`18`}}</span>
+    </td>
+  </tr>
+
+  <!-- Botón CTA (prioridad: bo_pdf_url > canonical_ur > URL) -->
+  <tr>
+    <td style="padding:4px 0 2px 0">
+      <a href="{{if(2.`24` = "N/D"; if(2.`12` = "N/D"; 2.`4`; 2.`12`); if((2.`24` = "") + ""; if(2.`12` = "N/D"; 2.`4`; if((2.`12` = "") + ""; 2.`4`; 2.`12`)); 2.`24`))}}"
+         target="_blank" rel="noopener noreferrer"
+         style="display:inline-block;background:#0B69C7;color:#ffffff;text-decoration:none;border-radius:6px;
+                padding:10px 14px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.2">
+        {{if(2.`42` = "N/D"; 2.`2`; if((2.`42` = """") + """"; 2.`2`; 2.`42`))}}
+      </a>
+    </td>
+  </tr>
+
+  <!-- Separador -->
+  <tr><td><hr style="border:0;border-top:1px solid #e5e7eb;margin:16px 0 0 0"></td></tr>
+</table>
